@@ -1,10 +1,14 @@
+"""Module containing the Task model."""
 from django.db import models
 
 
 class Task(models.Model):
-    title = models.CharField(verbose_name='Заголовок', max_length=120)
+    """Model representing a task."""
+
+    title = models.CharField(verbose_name='Title', max_length=120)
     description = models.TextField()
     completed = models.BooleanField(default=False)
 
-    def _str_(self):
+    def __str__(self):
+        """Return a string representation of the task."""
         return self.title
