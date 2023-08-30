@@ -1,6 +1,7 @@
 """Module containing Django admin settings for the API app."""
 
 from django.contrib import admin
+
 from .models import Task
 
 
